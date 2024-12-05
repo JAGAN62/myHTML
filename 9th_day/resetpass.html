@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset password</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color:blanchedalmond;
+        }
+        .reset1{
+            background: #090909;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 3px 3px 20px rgb(3, 239, 38);
+            width: 300px;
+        }
+        .reset1 h2{
+            text-align: center;
+            margin-bottom: 30px;
+            color:aqua;
+            filter:drop-shadow(1px 4px 0px red)
+        }
+       input{
+            margin: 10px 0;
+            border: 1px solid #f4f3f5;
+            border-radius: 20px;
+            width: 92%;
+            padding: 10px;
+            background-color: #0a0a0a;
+            color:rgb(8, 8, 8)
+        }
+        input:hover{
+            background-color: #fdfdfb;
+        }
+        input::placeholder{
+            color:rgb(230, 14, 190);
+            opacity: inherit;
+        }
+        button{
+            margin: 10px 0;
+            width: 150px;
+            padding:2%;
+            border-radius: 20px; 
+            background-color:rgb(28, 135, 154);
+            box-shadow: 0px 2px 15px rgb(239, 3, 152);
+            cursor:-webkit-grab;
+        }
+        button:hover{
+            color:rgb(5, 11, 193);
+            background-color:rgb(246, 250, 246);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="reset1">
+        <h2>Reset Password</h2>
+        <div  class="in1">
+            <input placeholder='OLD PASSWORD' type="password" maxlength="30" name="resetpass" pattern="(?=. *[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[0-9])[A-Za-z!@#$%^&*0-9]{8,}" required>
+        </div>
+        <div class="reset2">
+            <input placeholder='NEW PASSWORD' type="password" maxlength="30" name="resetpass" pattern="(?=. *[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[0-9])[A-Za-z!@#$%^&*0-9]{8,}" required>
+        </div>
+        <div>
+            <input placeholder='RE-ENTER NEWPASSWORD' type="password" maxlength="30" name="resetpass" pattern="(?=. *[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[0-9])[A-Za-z!@#$%^&*0-9]{8,}" required>
+        </div>
+       <div class="a1">
+      <center> <button type="submit">Reset Password</button></center>
+       </div>
+    </div>
+</body>
+</html>

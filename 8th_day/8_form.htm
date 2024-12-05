@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-image: url('../all_images/sky3.jpg');
+            background-repeat:no-repeat;
+            background-position:70%;
+            background-attachment:fixed;
+            background-size:cover;
+            width: 100%;
+            height: 100vh;
+        }
+h2{
+    text-align: center;
+    font-size: 45px;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStKtM60gXK1xFh3XRNteeNowX3pjEHJMGUTQ&s');
+    background-clip: text;
+    color:transparent;
+    animation: move 1s infinite;
+    width:100%;
+}
+@keyframes move{
+    100%{
+        background-position-x:500px;
+    }
+
+}
+form{
+    padding:0;
+   width:auto;
+   margin-left: 4%;
+   border-radius: 10px;
+}
+label {
+            display:block;
+            margin-bottom:1px;
+            color:rgb(255, 0, 132)
+}
+.hobbies {
+            display: flex;
+            gap: 10px;}
+.button-group input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+        .button-group input {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-group input[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+        
+    </style> 
+</head>
+<body>
+      
+    <h2>REGISTER FORM</h2>
+        <form action="https://formsubmit.co/jagan.mamanduru@gmail.com" method="post" onsubmit="return validURL()">
+             <div class="form-group">
+                 <label for="firstname">FIRST NAME : </label>
+                 <input type="text" id="firstname" name="Firstname" maxlength="20" pattern="[a-zA-Z\s]+" title="Only letters are allowed (a-z, A-Z)"><br><br>
+             </div> 
+             <div class="form-group">
+                <label for="firstname">SECOND NAME : </label>
+                <input type="text" id="secondname" name="Secondname" maxlength="20" pattern="[a-zA-Z\s]+" title="Only letters are allowed (a-z, A-Z)"><br><br>
+             </div>
+             <div class="class-group">
+                <label for="dob">DOB : </label>
+                <input type="date" id="dob">
+            </div><br>
+            <div class="class-group">
+                <label for="email">Email ID : </label>
+                <input type="email" id="email" name="Email" title="Enter your mail" required>
+            </div><br>
+            <div class="class-group">
+                <label for="pass">Password : </label>
+                <input type="password" id="pass" name="Password" title="Enter your password" required>
+            </div><br>
+            <div class="class-group">
+                <label for="mobile">Mobile No : </label>
+                <input type="tel" id="mobile" name="Mobilenumber"  title="Enter Mobile Number" maxlength="10" pattern="[0-9]{10}" required>
+            </div><br>
+            <div class="class-group">
+                <label for="link">URL : </label>
+                <input type="url" id="link" name="url"  title="Enter url" value="https://www.google.com" >
+            </div><br>
+            <div class="class-group">
+                <label for="gender">Gender : </label>
+                <input id="gender" type="radio" name="Gender" value="Male">Male
+                <input id="gender" type="radio" name="Gender" value="Female">Female
+                <input id="gender" type="radio" name="Gender" value="Others">Others
+            </div><br>
+            <div class="class-group">
+                <label for="address">Address</label>
+                <textarea id="address" row="5" column="5"></textarea>
+            </div>
+            <div class="class-group">
+                <label for="city">City : </label>
+                <input type="text" id="city" maxlength="30" title="max 30 characters A-Z">
+            </div><br>
+            <div class="form-group">
+                <label for="pincode">PIN Code : </label>
+                <input type="text" id="pincode" maxlength="6" pattern="[0-9]{6}" title="6 digit number">
+            </div><br>
+            <div class="form-group">
+                <label for="state">State : </label>
+                <input type="text" id="state" maxlength="30" title="max 30 characters A-Z">
+            </div><br>
+            <div class="form-group">
+                <label>Country : </label>
+                <input type="text" value="India" readonly>
+            </div><br>
+            <div class="form-group">
+                <label for="file">File : </label>
+                <input type="file" name="file" id="file" >
+            </div><br>
+            <div class="form-group">
+                <h3 style="color:#e6e609">Intrest in Technical skills</h3>
+                <label for="java-range">Java:</label>
+                <input type="range" id="java-range" min="0" max="100" value="50" oninput="javaOutput.value = this.value">
+                <output id="java-output" name="javaOutput">50</output><br>
+                
+                <label for="python-range">Python:</label>
+                <input type="range" id="python-range" min="0" max="100" value="50" oninput="pythonOutput.value = this.value">
+                <output id="python-output" name="pythonOutput">70</output><br>
+                
+                <label for="c-range">C:</label>
+                <input type="range" id="c-range" min="0" max="100" value="50" oninput="cOutput.value = this.value">
+                <output id="c-output" name="cOutput">100</output><br>
+                 
+                <label for="cp-range">C++:</label>
+                <input type="range" id="cp-range" min="0" max="100" value="50" oninput="cpOutput.value = this.value">
+                <output id="cp-output" name="cpOutput">40</output><br>
+            </div><br>
+            <div class="form-group">
+                <label for="color">choose your favourate color : </label>
+                <input type="color" name="color">
+            </div><br>
+            <div class="form-group">
+                <label>Hobbies : </label>
+                <div class="hobbies">
+                    <input type="checkbox" id="drawing" name="coding" value="selected"> Coding<br>
+                    <input type="checkbox" id="singing" name="singing" value="selected"> Singing<br>
+                    <input type="checkbox" id="dancing" name="dancing" value="selected"> Dancing<br>
+                    <input type="checkbox" id="sketching" name="sketching" value="selected"> Sketching<br>
+                    <input type="checkbox" id="others" name="others" value="selected"> Others<br>
+                </div><br>
+            <div class="button-group" style="text-align: center;">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+            </div> 
+        </form>
+        <p id="successMessage">Form successfully submitted!</p>
+    
+    <script>
+        const form = document.getElementById('registrationForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from refreshing the page
+            successMessage.style.display = 'block'; // Show the success message
+        });
+    </script>
+        
+</body>
+</html>
